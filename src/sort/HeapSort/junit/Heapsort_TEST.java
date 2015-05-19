@@ -1,4 +1,4 @@
-package quickSort.junit;
+package sort.HeapSort.junit;
 
 import static org.junit.Assert.*;
 
@@ -10,11 +10,10 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 
-import quickSort.code.QuickSort;
+import sort.HeapSort.code.heap_sort.heap_sort;
 
-@RunWith(value=Parameterized.class)
-public class QuickSort_TEST {
-
+@RunWith(value = Parameterized.class)
+public class Heapsort_TEST {
 	private int[][] list_input = {
 			{14,10,4,2,3,1,7,16,8,9},
 			{4,2,13,15,8,6,7,8,2,4,12,11,5,0,1,30,4},
@@ -31,10 +30,10 @@ public class QuickSort_TEST {
 	private int expected_index;
 	
 	/**
-	 * @param input_index ÊäÈëµÄÊý×éÔÚinputÖÐµÄÏÂ±ê
-	 * @param expected_index Ô¤ÆÚµÄÊý×éÔÚexpectedÖÐµÄÏÂ±ê
+	 * @param input_index ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½inputï¿½Ðµï¿½ï¿½Â±ï¿½
+	 * @param expected_index Ô¤ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½expectedï¿½Ðµï¿½ï¿½Â±ï¿½
 	 */
-	public QuickSort_TEST(int input_index ,  int expected_index){
+	public Heapsort_TEST(int input_index ,  int expected_index){
 		this.input_index = input_index;
 		this.expected_index = expected_index;
 	}
@@ -53,20 +52,18 @@ public class QuickSort_TEST {
 			objects[i][1] = i;
 		}
     	
-        return Arrays.asList(objects); // ½«Êý×é×ª»»³É¼¯ºÏ·µ»Ø
+        return Arrays.asList(objects); // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½ï¿½É¼ï¿½ï¿½Ï·ï¿½ï¿½ï¿½
     }  
     
 	@Test
 	public void test_Build() {
-		int[] list = list_input[input_index];
-		QuickSort.quickSort(list,0,list.length-1);
-		
+		int[] list = heap_sort.sort(list_input[input_index].clone());
 		for (int i : list) {
 			System.out.print(i+" ");
 		}
 		System.out.println();
 		
-		assertArrayEquals(list_expected[expected_index], list);  
+		assertArrayEquals(list_expected[expected_index], heap_sort.sort(list_input[input_index].clone()));  
 	}
 
 }

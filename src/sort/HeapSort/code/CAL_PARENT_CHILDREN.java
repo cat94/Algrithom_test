@@ -1,9 +1,9 @@
-package HeapSort.code;
+package sort.HeapSort.code;
 
 
 /**
- * 获得树中的parent和children
- * 由于java中list以0开始，所以对于下标要进行一定的加减1处理
+ * 锟斤拷锟斤拷锟斤拷械锟絧arent锟斤拷children
+ * 锟斤拷锟斤拷java锟斤拷list锟斤拷0锟斤拷始锟斤拷锟斤拷锟皆讹拷锟斤拷锟铰憋拷要锟斤拷锟斤拷一锟斤拷锟侥加硷拷1锟斤拷锟斤拷
  * @author shen
  *
  */

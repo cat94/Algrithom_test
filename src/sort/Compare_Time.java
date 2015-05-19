@@ -1,23 +1,18 @@
 package sort;
 
-import java.awt.List;
-
-import quickSort.code.QuickSort;
-import HeapSort.code.heap_sort.heap_sort;
-import HeapSort.code.heapify.MAX_HEAPIFY;
-import HeapSort.code.heapify.MIN_HEAPIFY;
-import HeapSort.code.heapify.max_heapify_non_Iterator;
+import sort.quickSort.code.QuickSort;
+import sort.HeapSort.code.heap_sort.heap_sort;
 
 public class Compare_Time {
-	// Á½¸ö¶ÑµÄ½áµã¸öÊýÏàÍ¬£¬²¢ÇÒÐèÒªÒÆ¶¯µÄÎ»ÖÃ¡¢Â·¾¶¶¼ÏàÍ¬£¬±È½ÏÁ½·½·¨µÄËÙ¶È...£¨ß×£¬ÕâËÙ¶È²»¾ÍÊÇÒ»ÑùµÄÃ´=_=£©
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ÑµÄ½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½Æ¶ï¿½ï¿½ï¿½Î»ï¿½Ã¡ï¿½Â·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¬ï¿½ï¿½ï¿½È½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ù¶ï¿½...ï¿½ï¿½ï¿½×£ï¿½ï¿½ï¿½ï¿½Ù¶È²ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Ã´=_=ï¿½ï¿½
 //	private static int[] list_to_sort = { 45, 15, 10, 4, 6, 14, 2, 7, 8, 12,
 //			11, 13, 0, 1, 4, 9, 2 };
 	private static int[] list_to_sort = new int[100000];
 	
 	public static void main(String args[]) {
 		int i;
-		long startMili;// ¿ªÊ¼Ê±¼ä¶ÔÓ¦µÄºÁÃëÊý
-		long endMili;// ½áÊøÊ±¼ä¶ÔÓ¦µÄºÁÃëÊý
+		long startMili;// ï¿½ï¿½Ê¼Ê±ï¿½ï¿½ï¿½Ó¦ï¿½Äºï¿½ï¿½ï¿½ï¿½ï¿½
+		long endMili;// ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½Ó¦ï¿½Äºï¿½ï¿½ï¿½ï¿½ï¿½
 		
 		
 		for(int j=0;j<100000;j++){
@@ -25,7 +20,7 @@ public class Compare_Time {
 //			list_to_sort[j] = j;
 		}
 
-		//¶ÑÅÅÐò
+		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		startMili = System.currentTimeMillis();
 		i = 0;
 		while (i < 1) {
@@ -34,12 +29,12 @@ public class Compare_Time {
 			i++;
 		}
 		endMili = System.currentTimeMillis();
-		System.out.println("¶ÑÅÅÖ´ÐÐ1´ÎÅÅÐòÊ¹ÓÃÊ±¼ä:" + " "
+		System.out.println("ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ï¿½1ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½Ê±ï¿½ï¿½:" + " "
 				+ (endMili - startMili));
 			
 			
-			//¿ìÅÅ
-			startMili = System.currentTimeMillis();// µ±Ç°Ê±¼ä¶ÔÓ¦µÄºÁÃëÊý
+			//ï¿½ï¿½ï¿½ï¿½
+			startMili = System.currentTimeMillis();// ï¿½ï¿½Ç°Ê±ï¿½ï¿½ï¿½Ó¦ï¿½Äºï¿½ï¿½ï¿½ï¿½ï¿½
 			i = 0;
 			while (i < 1) {
 				int[] list = list_to_sort.clone();
@@ -47,7 +42,7 @@ public class Compare_Time {
 				i++;
 			}
 			endMili = System.currentTimeMillis();
-			System.out.println("¿ìÅÅÖ´ÐÐ1´ÎÅÅÐòÊ¹ÓÃÊ±¼ä:" + " "
+			System.out.println("ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ï¿½1ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½Ê±ï¿½ï¿½:" + " "
 					+ (endMili - startMili));
 			
 	}

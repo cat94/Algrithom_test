@@ -1,4 +1,4 @@
-package HeapSort.junit;
+package sort.HeapSort.junit;
 
 import static org.junit.Assert.*;
 
@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 
-import static HeapSort.code.heapify.MIN_HEAPIFY.HEAPIFY;
+import static sort.HeapSort.code.heapify.MIN_HEAPIFY.HEAPIFY;
 
 @RunWith(value = Parameterized.class)
 public class MIN_HEAPIFY_TEST {
@@ -32,9 +32,9 @@ public class MIN_HEAPIFY_TEST {
 	private int location;
 	
 	/**
-	 * @param input_index ÊäÈëµÄÊý×éÔÚinputÖÐµÄÏÂ±ê
-	 * @param location ²»Æ½ºâµÄÏÂ±ê
-	 * @param expected_index Ô¤ÆÚµÄÊý×éÔÚexpectedÖÐµÄÏÂ±ê
+	 * @param input_index ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½inputï¿½Ðµï¿½ï¿½Â±ï¿½
+	 * @param location ï¿½ï¿½Æ½ï¿½ï¿½ï¿½ï¿½Â±ï¿½
+	 * @param expected_index Ô¤ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½expectedï¿½Ðµï¿½ï¿½Â±ï¿½
 	 */
 	public MIN_HEAPIFY_TEST(int input_index , int location ,  int expected_index){
 		this.input_index = input_index;
@@ -51,9 +51,9 @@ public class MIN_HEAPIFY_TEST {
 			objects[i][0] = i;
 			objects[i][2] = i;
 		}
-    	objects[0][1] = 1;		//²»Æ½ºâµÄµãËùÔÚµÄÎ»ÖÃ
+    	objects[0][1] = 1;		//ï¿½ï¿½Æ½ï¿½ï¿½Äµï¿½ï¿½ï¿½ï¿½Úµï¿½Î»ï¿½ï¿½
     	
-        return Arrays.asList(objects); // ½«Êý×é×ª»»³É¼¯ºÏ·µ»Ø
+        return Arrays.asList(objects); // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½ï¿½É¼ï¿½ï¿½Ï·ï¿½ï¿½ï¿½
     }  
 
     @Test

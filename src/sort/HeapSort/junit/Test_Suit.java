@@ -1,4 +1,4 @@
-package HeapSort.junit;
+package sort.HeapSort.junit;
 
 
 import org.junit.Before;
@@ -11,9 +11,9 @@ public class Test_Suit {
 	public void setUp() throws Exception {
 	}
 	
-	// Ö¸¶¨ÔËÐÐÆ÷
+	// Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	@RunWith(Suite.class)
-	// Ö¸¶¨Òª²âÊÔµÄÀà
+	// Ö¸ï¿½ï¿½Òªï¿½ï¿½ï¿½Ôµï¿½ï¿½ï¿½
 	@Suite.SuiteClasses({ MAX_HEAPIFY_TEST.class, MIN_HEAPIFY_TEST.class })
 	public class TestAll
 	{

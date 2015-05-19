@@ -1,6 +1,6 @@
-package HeapSort.code.heapify;
+package sort.HeapSort.code.heapify;
 
-import static HeapSort.code.CAL_PARENT_CHILDREN.*;
+import static sort.HeapSort.code.CAL_PARENT_CHILDREN.*;
 
 public class MAX_HEAPIFY {
 	
@@ -11,7 +11,7 @@ public class MAX_HEAPIFY {
 		int l = LEFT(i);
 		int r = RIGHT(i);
 		
-		//ÕÒµ½Èý¸öÖÐ×î´óµÄÏÂ±ê
+		//ï¿½Òµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â±ï¿½
 		if (l<list.length && list[l]>list[i]) 
 			largest = l;
 		else 
@@ -20,10 +20,10 @@ public class MAX_HEAPIFY {
 		if (r<list.length && list[r]>list[largest]) 
 			largest = r;
 		
-		//i²»ÊÇÈý¸öÖÐ×î´óµÄ£¬ÔòÐèÒª½øÐÐÆ½ºâ¡£
-		//iÐèÒªºÍ×î´óµÄ×Ó½áµã½»»»Î»ÖÃ£¬½»»»ºólargest´¦Îªi£¬¼ÌÐø½øÐÐ²Ù×÷Ö±µ½×îÖÕÆ½ºâ
+		//iï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½Æ½ï¿½â¡£
+		//iï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó½ï¿½ã½»ï¿½ï¿½Î»ï¿½Ã£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½largestï¿½ï¿½Îªiï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð²ï¿½ï¿½ï¿½Ö±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ½ï¿½ï¿½
 		if (largest != i) {
-			//½»»»Î»ÖÃ
+			//ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½
 			int temp = list[largest];
 			list[largest] = list[i];
 			list[i] = temp;

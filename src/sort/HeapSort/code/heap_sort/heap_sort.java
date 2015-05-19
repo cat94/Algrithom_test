@@ -1,11 +1,11 @@
-package HeapSort.code.heap_sort;
+package sort.HeapSort.code.heap_sort;
 
-import HeapSort.code.build_heap.Build_Max_Heap;
-import HeapSort.code.heapify.max_heapify_non_Iterator;
+import sort.HeapSort.code.build_heap.Build_Max_Heap;
+import sort.HeapSort.code.heapify.max_heapify_non_Iterator;
 
 /**
- * 建立了最大堆之后，要依从小到大的顺序输出所有数字，只需要将最后一个元素与第0个元素对调，然后数组长度减一
- * 在对调之后需要使用max_heapify来使堆重新平衡
+ * 锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷之锟斤拷要锟斤拷锟斤拷小锟斤拷锟斤拷锟剿筹拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟街ｏ拷只锟斤拷要锟斤拷锟斤拷锟揭伙拷锟皆拷锟斤拷锟斤拷0锟斤拷元锟截对碉拷锟斤拷然锟斤拷锟斤拷锟介长锟饺硷拷一
+ * 锟节对碉拷之锟斤拷锟斤拷要使锟斤拷max_heapify锟斤拷使锟斤拷锟斤拷锟斤拷平锟斤拷
  * 
  * @author shen
  * 
@@ -15,7 +15,7 @@ public class heap_sort {
 		int[] list = {1,34,45,67,12,15,18,43,23,56,78,23};
 		sort(list.clone());
 		
-		int[] sorted_list = sort(list.clone());		//为了防止原数组被改变，使用深拷贝
+		int[] sorted_list = sort(list.clone());		//为锟剿凤拷止原锟斤拷锟介被锟侥变，使锟斤拷锟筋拷锟斤拷
 		for (int i : sorted_list) {
 			System.out.print(i+"  ");
 		}
@@ -31,7 +31,7 @@ public class heap_sort {
 			sorted_list[i]  = heaped_list[0];
 			heaped_list[0] = heaped_list[i];
 			
-			//由于java中数组无法通过索引来切割数组，所以进行了很费时的数组复制
+			//锟斤拷锟斤拷java锟斤拷锟斤拷锟斤拷锟睫凤拷通锟斤拷锟斤拷锟斤拷锟斤拷锟叫革拷锟斤拷锟介，锟斤拷锟皆斤拷锟斤拷锟剿很凤拷时锟斤拷锟斤拷锟介复锟斤拷
 				clone_list = heaped_list.clone();
 
 				heaped_list = new int[i];
@@ -39,7 +39,7 @@ public class heap_sort {
 				heaped_list[j] = clone_list[j];
 			}
 			
-			heaped_list = max_heapify_non_Iterator.HEAPIFY(heaped_list, 0);		//进行调整
+			heaped_list = max_heapify_non_Iterator.HEAPIFY(heaped_list, 0);		//锟斤拷锟叫碉拷锟斤拷
 			
 //			for (int k : heaped_list) {
 //				System.out.print(k+" ");

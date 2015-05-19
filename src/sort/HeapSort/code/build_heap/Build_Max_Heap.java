@@ -1,11 +1,11 @@
-package HeapSort.code.build_heap;
+package sort.HeapSort.code.build_heap;
 
-import static HeapSort.code.heapify.MAX_HEAPIFY.HEAPIFY;;
+import static sort.HeapSort.code.heapify.MAX_HEAPIFY.HEAPIFY;;
 
 public class Build_Max_Heap {
 
 	public static int[] build(int[] list) {
-		// ´ÓµÚ¶þ²ã¿ªÊ¼Ê¹ÓÃmax_heapifyËã·¨£¬ÓÉÓÚjavaµÄlist´Ó0¿ªÊ¼¼ÆÊý£¬ËùÒÔÔÚfloorµÄ»ù´¡ÉÏ¼õÒ»
+		// ï¿½ÓµÚ¶ï¿½ï¿½ã¿ªÊ¼Ê¹ï¿½ï¿½max_heapifyï¿½ã·¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½javaï¿½ï¿½listï¿½ï¿½0ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½floorï¿½Ä»ï¿½ï¿½Ï¼ï¿½Ò»
 		int start_index = (int) Math.floor(list.length / 2) - 1;
 		if (start_index >= 0) {
 			for (int i = start_index; i >= 0; i--) {

@@ -1,10 +1,8 @@
-package HeapSort.junit;
+package sort.quickSort.junit;
 
 import static org.junit.Assert.*;
 
 import java.util.Arrays;
-
-import HeapSort.code.build_heap.Build_Max_Heap;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -12,9 +10,11 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 
-@RunWith(value = Parameterized.class)
-public class Build_MAX_HEAP_TEST {
-	
+import sort.quickSort.code.QuickSort;
+
+@RunWith(value=Parameterized.class)
+public class QuickSort_TEST {
+
 	private int[][] list_input = {
 			{14,10,4,2,3,1,7,16,8,9},
 			{4,2,13,15,8,6,7,8,2,4,12,11,5,0,1,30,4},
@@ -22,19 +22,19 @@ public class Build_MAX_HEAP_TEST {
 	};
 	
 	private int[][] list_expected = {
-			{16 ,14 ,7 ,10 ,9 ,1 ,4 ,2 ,8 ,3 },
-			{30, 15, 13, 8, 12, 11, 7, 4, 2, 4, 8, 6, 5, 0, 1, 2, 4},
-			{45,39, 25, 18, 23, 2 ,12, 12, 17, 1, 19 } 
+			{1 ,2 ,3 ,4 ,7 ,8 ,9 ,10 ,14 ,16 },
+			{0 ,1 ,2 ,2 ,4 ,4 ,4 ,5 ,6 ,7 ,8 ,8 ,11, 12, 13, 15, 30 },
+			{1, 2, 12, 12, 17, 18, 19, 23, 25, 39, 45  } 
 	};
 	
 	private int input_index;
 	private int expected_index;
 	
 	/**
-	 * @param input_index ÊäÈëµÄÊý×éÔÚinputÖÐµÄÏÂ±ê
-	 * @param expected_index Ô¤ÆÚµÄÊý×éÔÚexpectedÖÐµÄÏÂ±ê
+	 * @param input_index ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½inputï¿½Ðµï¿½ï¿½Â±ï¿½
+	 * @param expected_index Ô¤ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½expectedï¿½Ðµï¿½ï¿½Â±ï¿½
 	 */
-	public Build_MAX_HEAP_TEST(int input_index ,  int expected_index){
+	public QuickSort_TEST(int input_index ,  int expected_index){
 		this.input_index = input_index;
 		this.expected_index = expected_index;
 	}
@@ -53,17 +53,20 @@ public class Build_MAX_HEAP_TEST {
 			objects[i][1] = i;
 		}
     	
-        return Arrays.asList(objects); // ½«Êý×é×ª»»³É¼¯ºÏ·µ»Ø
+        return Arrays.asList(objects); // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½ï¿½É¼ï¿½ï¿½Ï·ï¿½ï¿½ï¿½
     }  
     
 	@Test
 	public void test_Build() {
-		int[] list = Build_Max_Heap.build(list_input[input_index]);
+		int[] list = list_input[input_index];
+		QuickSort.quickSort(list,0,list.length-1);
+		
 		for (int i : list) {
 			System.out.print(i+" ");
 		}
 		System.out.println();
-		assertArrayEquals(list_expected[expected_index], Build_Max_Heap.build(list_input[input_index]));  
+		
+		assertArrayEquals(list_expected[expected_index], list);  
 	}
 
 }
